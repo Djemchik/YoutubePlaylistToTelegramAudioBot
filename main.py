@@ -32,8 +32,8 @@ def send_file(file_path, chat_id, token):
 current_directory = os.getcwd()
 files = [f for f in os.listdir(current_directory) if os.path.isfile(os.path.join(current_directory, f))]
 
-chat_id = "<-895143844>"
-token = "<5640044198:AAFmq7K5uA7TtJaX2ku41cWdRjPXpRkAY6k>"
+chat_id = "-895143844"
+token = "5640044198:AAFmq7K5uA7TtJaX2ku41cWdRjPXpRkAY6k"
 
 for file in files:
     file_path = os.path.join(current_directory, file)
