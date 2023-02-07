@@ -16,6 +16,8 @@ ydl_opts = {
         'preferredcodec': 'mp3',
         'preferredquality': '192',
     }],
+    'ignoreerrors': True, 
+    'continue_dl': True
 }
 
 BOT_TOKEN = "5640044198:AAFmq7K5uA7TtJaX2ku41cWdRjPXpRkAY6k"
