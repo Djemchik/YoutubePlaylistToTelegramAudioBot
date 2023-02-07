@@ -24,6 +24,6 @@ folder = "downloaded_audios"
 files = os.listdir(folder)
 for file in files:
     if is_audio_file(file):
-    file_path = os.path.join(folder, file)
-    send_to_telegram(file_path)
-    time.sleep(5)
+        file_path = os.path.join(folder, file)
+        send_to_telegram(file_path)
+        time.sleep(5)
