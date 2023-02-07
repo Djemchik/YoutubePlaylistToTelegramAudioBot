@@ -22,7 +22,11 @@ ydl_opts = {
         'preferredquality': '192',
     }],	
     'ignoreerrors': True,
-    'continue_dl': True
+    'continue_dl': True,
+    'nocheckcertificate': True,
+    'simulate': False,
+    'prefer_ffmpeg': True,
+    'n_downloads': 4
 }
 
 
