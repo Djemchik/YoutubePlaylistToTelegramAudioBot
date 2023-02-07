@@ -56,5 +56,5 @@ async def send_music_files():
 
 async def main():
     await asyncio.gather(await download_playlist(), await send_music_files())
-
+    print("Files have been successfully sent to the Telegram group")
 asyncio.run(main())
