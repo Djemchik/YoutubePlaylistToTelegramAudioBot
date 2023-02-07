@@ -39,7 +39,11 @@ async def download_playlist():
             if os.path.exists(file_path):
                 print(f"File '{entry['title']}' already exists, skipping download")
                 continue
-            ydl.download([entry["webpage_url"]])
+            try: 
+                ydl.download([entry["webpage_url"]])
+            except Exception as e:
+                with open('failed_downloads.txt', 'a') as file:
+                    file.write(f"{url} failed with error: {str(e)}\n")
 
 async def send_music_files():
     # List of allowed file extensions for music files
