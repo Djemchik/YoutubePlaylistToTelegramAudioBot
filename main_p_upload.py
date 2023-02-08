@@ -45,6 +45,7 @@ async def download_playlist():
                 continue
             try: 
                 ydl.download([entry["webpage_url"]])
+                send_music_files()
             except Exception as e:
                 with open('failed_downloads.txt', 'a') as file:
                     file.write(f"{url} failed with error: {str(e)}\n")
