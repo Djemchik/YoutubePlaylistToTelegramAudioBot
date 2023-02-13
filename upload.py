@@ -22,8 +22,12 @@ def is_audio_file(file):
 
 folder = "downloaded_audios"
 files = os.listdir(folder)
+total_files = len(files)
+processed_files = 0
 for file in files:
     if is_audio_file(file):
         file_path = os.path.join(folder, file)
         send_to_telegram(file_path)
         time.sleep(5)
+        processed_files += 1
+        print(f"Upload progress: {100 * processed_files / total_files:.2f}%")
