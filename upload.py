@@ -42,7 +42,7 @@ for file in files:
         time_elapsed = time.time() - start
         estimated_time_left = (time_elapsed / processed_files) * (total_files - processed_files)
         print(f"{processed_files} of {total_files} files processed. {file} sent. Estimated time left: {estimated_time_left:.2f} seconds")
-        time.sleep(5)
+        time.sleep(2)
         
         
 
